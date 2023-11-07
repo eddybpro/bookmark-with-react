@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --color-brand-1: hsl(229, 31%, 21%);
+  --color-brand-2: hsl(229, 8%, 60%);
+  --color-brand-3: hsl(0, 94%, 66%);
+
+  --color-site-1: hsl(231, 69%, 60%);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+footer {
+  padding: 5rem 2rem 2rem;
+  background-color: var(--color-brand-1);
+  text-align: center;
+}
+
+.FooterLogo {
+  display: block;
+  width: 14rem;
+  margin: 0 auto 2rem;
+}
+
+.FooterLogo > img {
+  width: 100%;
+  filter: invert(100%) sepia(8%) saturate(1%) hue-rotate(2deg) brightness(112%)
+    contrast(99%);
+}
+
+.FooterLinks {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.FooterLinks-Link {
+  margin-bottom: 2rem;
+}
+
+.FooterLinks-Link > a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.FooterLinks-Link > a:hover {
+  color: var(--color-brand-3);
+}
+
+.SocialIcons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.socialIcon {
+  color: hsl(0, 0%, 100%);
+  font-size: 3rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: var(--color-brand-3);
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .FooterLogo {
+    margin: 0;
+  }
+
+  .FooterLinks {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 0;
+  }
+
+  .FooterLinks-Link {
+    margin-bottom: 0;
+  }
+}

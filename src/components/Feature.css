@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --color-brand-1: hsl(229, 31%, 21%);
+  --color-brand-2: hsl(229, 8%, 60%);
+  --color-brand-3: hsl(0, 94%, 66%);
+
+  --color-site-1: hsl(231, 69%, 60%);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.FeatureBox {
+  margin: 2rem 0;
+}
+
+.FeatureBox-ImgBox {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.FeatureBox-ImgBox::after {
+  position: absolute;
+  display: block;
+  content: "";
+  left: 0;
+  top: 30%;
+  width: 80%;
+  height: 80%;
+  background-color: var(--color-site-1);
+  border-bottom-right-radius: 10rem;
+  z-index: -1;
+}
+
+.FeatureBox-ImgBox > img {
+  width: 100%;
+}
+
+.FeatureBox-TxtBox {
+  padding: 2rem;
+  text-align: center;
+}
+
+.FeatureBox-TxtBox-Title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-brand-1);
+  margin-bottom: 2rem;
+}
+
+.FeatureBox-TxtBox-Desc {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: var(--color-brand-2);
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .FeatureBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .FeatureBox-TxtBox {
+    text-align: left;
+  }
+
+  .FeatureBox-TxtBox-Desc {
+    max-width: 35rem;
+  }
+
+  .FeatureBox-TxtBox-Btn {
+    display: block;
+    background-color: var(--color-site-1);
+    color: hsl(0, 0%, 100%);
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+}

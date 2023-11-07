@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --color-brand-1: hsl(229, 31%, 21%);
+  --color-brand-2: hsl(229, 8%, 60%);
+  --color-brand-3: hsl(0, 94%, 66%);
+
+  --color-site-1: hsl(231, 69%, 60%);
+  --color-site-2: hsla(229, 31%, 21%, 0.9);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.Logo {
+  position: sticky;
+  display: block;
+  width: 14rem;
+  z-index: 1000;
+}
+
+.Logo > img {
+  width: 100%;
+}
+
+.Logo.filter > img {
+  filter: invert(100%) sepia(8%) saturate(1%) hue-rotate(2deg) brightness(112%)
+    contrast(99%);
+}
+
+.MenuBox {
+  position: relative;
+}
+
+.MenuBox > button {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 2.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.MenuBox > button > img {
+  width: 100%;
+}
+
+.NavLinks {
+  display: none;
+}
+
+.NavLinks > ul {
+  list-style: none;
+}
+
+.NavLinks.open {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: var(--color-site-2);
+  padding: 2rem;
+  padding-top: 15rem;
+  text-align: center;
+  z-index: 100;
+}
+
+.NavLinks-Link {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--color-brand-2);
+}
+
+.NavLinks-Link:nth-last-of-type(2) {
+  border-bottom: 1px solid var(--color-brand-2);
+}
+
+.NavLinks-Link.login {
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  border-radius: 0.5rem;
+  border: 2px solid hsl(0, 0%, 100%);
+}
+
+.NavLinks-Link.login > a {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.NavLinks-Link > a {
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.NavSocialIconsBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.NavSocialIconsBox > button {
+  display: block;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 3rem;
+}
+
+.NavSocialIconsBox > button > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding: 3rem 4rem;
+  }
+  .Logo.filter > img {
+    filter: none;
+  }
+
+  .MenuBox,
+  .mobile {
+    display: none;
+  }
+
+  .NavLinks,
+  .NavLinks.open {
+    display: block;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    padding-top: 0;
+    text-align: center;
+  }
+
+  .NavLinks > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .NavLinks-Link {
+    border-top: 0;
+  }
+
+  .NavLinks-Link:nth-last-of-type(2) {
+    border-bottom: 0;
+  }
+
+  .NavLinks-Link.login {
+    margin-top: 0;
+    border: 2px solid var(--color-brand-1);
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link.login:hover {
+    border-color: var(--color-brand-3);
+  }
+
+  .NavLinks-Link > a {
+    color: var(--color-brand-1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .NavLinks-Link > a:hover {
+    color: var(--color-brand-3);
+  }
+}

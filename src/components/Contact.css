@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --color-brand-1: hsl(229, 31%, 21%);
+  --color-brand-2: hsl(229, 8%, 60%);
+  --color-brand-3: hsl(0, 94%, 66%);
+
+  --color-site-1: hsl(231, 69%, 60%);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.ContactBox {
+  padding: 4rem 2rem 2rem;
+  background-color: var(--color-site-1);
+  text-align: center;
+}
+
+.ContactBox-Txt {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+}
+
+.ContactBox-Title {
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.ContactBox-FormBox-Label {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.ContactBox-FormBox-Label.LabelError {
+  background-color: var(--color-brand-3);
+}
+
+.ContactBox-FormBox-Input {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  border: 2px solid hsl(0, 0%, 100%);
+  outline: none;
+  color: var(--color-brand-1);
+}
+
+.ContactBox-FormBox-Label.LabelError .ContactBox-FormBox-Input {
+  border-color: var(--color-brand-3);
+}
+
+.img-error {
+  position: absolute;
+  display: block;
+  right: 1rem;
+  top: 20%;
+  width: 2rem;
+}
+
+.error {
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 100%);
+  position: absolute;
+  left: 1rem;
+  bottom: 0.8rem;
+}
+
+.ContactBox-FormBox-Btn {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  text-transform: capitalize;
+  color: hsl(0, 0%, 100%);
+  background-color: var(--color-brand-3);
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 2px solid var(--color-brand-3);
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.ContactBox-FormBox-Btn:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--color-brand-3);
+}
+
+@media screen and (min-width: 768px) {
+  .ContactBox-Title {
+    font-size: 3.5rem;
+    max-width: 50rem;
+    margin: 0 auto 2rem;
+  }
+
+  .ContactBox-FormBox {
+    display: grid;
+    grid-template-columns: 1fr 25rem;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: auto;
+  }
+}

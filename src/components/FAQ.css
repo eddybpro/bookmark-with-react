@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --color-brand-1: hsl(229, 31%, 21%);
+  --color-brand-2: hsl(229, 8%, 60%);
+  --color-brand-3: hsl(0, 94%, 66%);
+
+  --color-site-1: hsl(231, 69%, 60%);
+
+  --font-rubik: "Rubik", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-rubik);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.FAQBox {
+  max-width: 60rem;
+  padding: 2rem;
+  text-align: center;
+  margin: auto;
+}
+
+.FAQBox-Title {
+  font-size: 3rem;
+  color: var(--color-brand-1);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.FAQBox-Para {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+}
+
+.FAQBox-Questions {
+  list-style: none;
+}
+
+.FAQBox-Questions > li {
+  border-bottom: 1px solid var(--color-brand-2);
+}
+
+.FAQBox-Questions-Head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.FAQBox-Questions-Head-Question {
+  font-size: 1.6rem;
+  color: var(--color-brand-1);
+}
+
+.FAQBox-Questions-Head-Btn {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 2rem;
+}
+
+.FAQBox-Questions-Head-Btn > img {
+  width: 100%;
+}
+
+.FAQBox-Questions-Head-Btn.active > img {
+  transform: rotate(180deg);
+  filter: invert(41%) sepia(88%) saturate(950%) hue-rotate(326deg)
+    brightness(101%) contrast(93%);
+}
+
+.FAQBox-Questions-Answer {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+  line-height: 2.2rem;
+  text-align: left;
+}
+
+.FAQBox-Btn {
+  background-color: var(--color-site-1);
+  font-size: 1.6rem;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  text-transform: capitalize;
+}
